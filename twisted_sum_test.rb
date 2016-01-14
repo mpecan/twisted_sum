@@ -27,7 +27,8 @@ class TwistedSumTest < Minitest::Test
   end
 
   def test_error_msg_for_negative_numbers
-    assert_equal 'Your input must be a positive number.', TwistedSum.new(-1).calculate
+    assert_equal 'Your input must be a positive number.', TwistedSum.new(-1)
+                                                                    .calculate
   end
 
   def test_return_0_if_input_is_0
