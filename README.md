@@ -1,6 +1,6 @@
 # Important
 
-Note that code is using #positive? method and you have to install Ruby 2.3 or
+Note that code is using #negative? method and you have to install Ruby 2.3 or
 change the method negative? to ```number < 0 ```
 
 ```ruby
