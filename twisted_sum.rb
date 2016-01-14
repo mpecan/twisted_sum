@@ -6,16 +6,15 @@ class TwistedSum
   end
 
   def calculate
+    return 'Your input must be a positive number.' if number.negative?
+    return 0 if number.zero?
+
     (1..number).to_a.map do |number|
-      if number < 10
-        number
-      else
-        sum_for_every_digit(number)
-      end
+      number < 10 ?  number : sum_for_every_digit(number)
     end.inject(:+)
   end
 
-  protected
+  private
 
   def sum_for_every_digit(number)
     number.to_s.chars.map(&:to_i).inject(:+)

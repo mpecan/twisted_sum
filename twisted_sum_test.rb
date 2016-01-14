@@ -15,17 +15,22 @@ class TwistedSumTest < Minitest::Test
   end
 
   def test_sum_of_11_is_48
-    skip
     assert_equal 48, TwistedSum.new(11).calculate
   end
 
   def test_sum_of_12_is_51
-    skip
     assert_equal 51, TwistedSum.new(12).calculate
   end
 
+  def test_sum_of_100_000_is_1
+    assert_equal 2250001, TwistedSum.new(100_000).calculate
+  end
+
   def test_error_msg_for_negative_numbers
-    skip
-    assert_equal 'Error. Your input must be a positive number.', TwistedSum.new(-1).calculate
+    assert_equal 'Your input must be a positive number.', TwistedSum.new(-1).calculate
+  end
+
+  def test_return_0_if_input_is_0
+    assert_equal 0, TwistedSum.new(0).calculate
   end
 end
